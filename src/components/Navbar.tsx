@@ -6,6 +6,7 @@ const links = [
   { label: 'Página Inicial', href: '#inicio' },
   { label: 'Quem Somos', href: '#quem-somos' },
   { label: 'Serviços', href: '#servicos' },
+  { label: 'Dúvidas', href: '#duvidas' },
   { label: 'Instagram', href: 'https://www.instagram.com/jfalumvidrosoficial/' },
 ]
 

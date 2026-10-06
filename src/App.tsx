@@ -1,15 +1,25 @@
 import Hero from './components/Hero'
-import Products from './components/Products'
+import About from './components/About'
+import WhyUs from './components/WhyUs'
+import HorizontalGallery from './components/HorizontalGallery'
+import ExpandPanels from './components/ExpandPanels'
 import Partner from './components/Partner'
+import Faq from './components/Faq'
 import Location from './components/Location'
 import ContactForm from './components/ContactForm'
+import ScrollProgress from './components/ScrollProgress'
 
 export default function App() {
   return (
     <>
+      <ScrollProgress />
       <Hero />
-      <Products />
+      <About />
+      <WhyUs />
+      <HorizontalGallery />
+      <ExpandPanels />
       <Partner />
+      <Faq />
       <Location />
       <ContactForm />
       <footer className="bg-black px-6 py-6 text-center text-xs text-white/60">

@@ -50,7 +50,7 @@ export default function ContactForm() {
               <input id={f.id} name={f.id} type={f.type} placeholder={f.ph} required={f.id !== 'email'} className={campo} />
             </div>
           ))}
-          <button type="submit" className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#0a3d91] px-8 py-4 font-medium text-white transition-colors hover:bg-[#64CEFB] hover:text-[#0b2a4a]">
+          <button type="submit" className="btn-anim group flex w-full items-center justify-center gap-2 rounded-full bg-[#0a3d91] px-8 py-4 font-medium text-white transition-colors hover:bg-[#64CEFB] hover:text-[#0b2a4a]">
             <Send className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             Solicitar orçamento
           </button>

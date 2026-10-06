@@ -13,3 +13,18 @@ body { margin: 0; background: #000; font-family: 'Inter', sans-serif; -webkit-fo
 }
 .js-luz:hover::before { opacity: 1; }
 .js-luz > * { position: relative; z-index: 1; }
+
+/* Botões animados: elevação no hover, brilho que cruza e leve "afundar" no clique */
+.btn-anim { position: relative; overflow: hidden; transition: transform .25s, background-color .25s, color .25s, box-shadow .25s; }
+.btn-anim:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(100, 206, 251, .6); }
+.btn-anim:active { transform: translateY(0) scale(.97); }
+.btn-anim::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; transform: translateX(-120%);
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .35) 50%, transparent 70%);
+}
+.btn-anim:hover::after { transform: translateX(120%); transition: transform .7s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn-anim, .btn-anim::after { transition: none; }
+}

@@ -33,7 +33,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div id="quem-somos" className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-6 text-center">
+        <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-6 text-center">
           <p className="mb-4 text-xs uppercase tracking-tight text-white/80 md:text-sm">
             Quem Somos · Vidraçaria
           </p>
@@ -45,7 +45,7 @@ export default function Hero() {
           </h1>
           <a
             href="#contato"
-            className="group mt-10 inline-flex items-center gap-2 rounded-full bg-[#0a3d91] px-6 py-3 text-white transition-colors hover:bg-[#0b2a4a] md:px-8 md:py-4"
+            className="btn-anim group mt-10 inline-flex items-center gap-2 rounded-full bg-[#0a3d91] px-6 py-3 text-white transition-colors hover:bg-[#0b2a4a] md:px-8 md:py-4"
           >
             Solicite seu orçamento
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
