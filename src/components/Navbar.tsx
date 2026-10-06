@@ -6,7 +6,7 @@ const links = [
   { label: 'Página Inicial', href: '#inicio' },
   { label: 'Quem Somos', href: '#quem-somos' },
   { label: 'Serviços', href: '#servicos' },
-  { label: 'Instagram', href: 'https://instagram.com/jfalumvidros' },
+  { label: 'Instagram', href: 'https://www.instagram.com/jfalumvidrosoficial/' },
 ]
 
 const linkClass = 'text-sm text-white/80 transition-colors hover:text-white'

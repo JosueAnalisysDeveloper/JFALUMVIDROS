@@ -7,7 +7,7 @@ const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(ENDERECO)}&ou
 const info = [
   { icon: MapPin, label: 'Endereço', value: ENDERECO, href: undefined as string | undefined },
   { icon: Phone, label: 'Telefone / WhatsApp', value: '(85) 98805-2608', href: `https://wa.me/${WHATSAPP}` },
-  { icon: Instagram, label: 'Instagram', value: `@${INSTAGRAM}`, href: `https://instagram.com/${INSTAGRAM}` },
+  { icon: Instagram, label: 'Instagram', value: `@${INSTAGRAM}`, href: `https://www.instagram.com/${INSTAGRAM}/` },
   { icon: Clock, label: 'Horário de funcionamento', value: 'Abre às 8:00 · Fecha às 17:30', href: undefined },
 ]
 

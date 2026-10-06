@@ -12,4 +12,4 @@ export function useLuz() {
 }
 
 export const WHATSAPP = '5585988052608'
-export const INSTAGRAM = 'jfalumvidros'
+export const INSTAGRAM = 'jfalumvidrosoficial'

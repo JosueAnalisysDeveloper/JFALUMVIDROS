@@ -1,12 +1,26 @@
-import { DoorOpen, ShowerHead, Blinds, Wrench } from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
 import { useLuz } from '../hooks'
+import espelhos from '../assets/espelhos.webp'
+import espelhosDecorativos from '../assets/espelhos-decorativos.webp'
+import box from '../assets/box-banheiro.webp'
+import janelas from '../assets/janelas.webp'
+import portasVidro from '../assets/portas-vidro.webp'
+import guardaCorpo from '../assets/guarda-corpo.webp'
+import portasAluminio from '../assets/portas-aluminio.webp'
+import portoesAluminio from '../assets/portoes-aluminio.webp'
+import acessorios from '../assets/acessorios.webp'
+import cortina from '../assets/cortina-vidro.webp'
 
-const items: { icon: LucideIcon; title: string; text: string }[] = [
-  { icon: DoorOpen, title: 'Portas de vidro', text: 'Portas de vidro temperado e esquadrias de alumínio, sob medida para casa e comércio.' },
-  { icon: ShowerHead, title: 'Boxes de banheiro', text: 'Box de vidro temperado com acabamento e vedação de qualidade.' },
-  { icon: Blinds, title: 'Cortinas de vidro', text: 'Fechamento de varandas e sacadas com mais conforto e visual moderno.' },
-  { icon: Wrench, title: 'Acessórios', text: 'Ferragens, puxadores, roldanas e acessórios para vidro e alumínio.' },
+const items = [
+  { title: 'Espelhos', img: espelhos },
+  { title: 'Espelhos decorativos', img: espelhosDecorativos },
+  { title: 'Box de banheiro', img: box },
+  { title: 'Janelas', img: janelas },
+  { title: 'Portas de vidro', img: portasVidro },
+  { title: 'Guarda-corpo', img: guardaCorpo },
+  { title: 'Portas de alumínio', img: portasAluminio },
+  { title: 'Portões de alumínio', img: portoesAluminio },
+  { title: 'Acessórios para vidro', img: acessorios },
+  { title: 'Cortina de vidro', img: cortina },
 ]
 
 export default function Products() {
@@ -18,16 +32,15 @@ export default function Products() {
         <h2 className="mt-3 max-w-2xl text-3xl font-medium tracking-tighter text-white md:text-5xl">
           Vidro e alumínio para cada ambiente
         </h2>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map(({ icon: Icon, title, text }) => (
+        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-5 lg:grid-cols-5">
+          {items.map(({ title, img }) => (
             <article
               key={title}
               onMouseMove={luz}
-              className="js-luz rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-[#64CEFB]/40"
+              className="js-luz overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:border-[#64CEFB]/40"
             >
-              <Icon className="h-9 w-9 text-[#64CEFB]" />
-              <h3 className="mt-5 text-lg font-semibold text-white">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{text}</p>
+              <img src={img} alt={title} loading="lazy" className="aspect-square w-full object-cover" />
+              <h3 className="px-3 py-4 text-center text-sm font-semibold text-white md:text-base">{title}</h3>
             </article>
           ))}
         </div>
