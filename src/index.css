@@ -4,3 +4,12 @@
 
 html { scroll-behavior: smooth; }
 body { margin: 0; background: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+
+/* Luz que segue o mouse: o JS só escreve --x e --y, o brilho é um gradiente CSS */
+.js-luz { position: relative; overflow: hidden; }
+.js-luz::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(220px circle at var(--x, 50%) var(--y, 50%), rgba(100, 206, 251, .22), transparent 70%);
+}
+.js-luz:hover::before { opacity: 1; }
+.js-luz > * { position: relative; z-index: 1; }
