@@ -39,7 +39,7 @@ export default function Products() {
               onMouseMove={luz}
               className="js-luz overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:border-[#64CEFB]/40"
             >
-              <img src={img} alt={title} loading="lazy" className="aspect-square w-full object-cover" />
+              <img src={img} alt={title} loading="lazy" className="aspect-[4/5] w-full object-cover" />
               <h3 className="px-3 py-4 text-center text-sm font-semibold text-white md:text-base">{title}</h3>
             </article>
           ))}
