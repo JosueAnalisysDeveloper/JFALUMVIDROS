@@ -8,12 +8,14 @@ import Partner from './components/Partner'
 import Faq from './components/Faq'
 import Location from './components/Location'
 import ContactForm from './components/ContactForm'
+import WhatsAppButton from './components/WhatsAppButton'
 import ScrollProgress from './components/ScrollProgress'
 
 export default function App() {
   return (
     <>
       <ScrollProgress />
+      <WhatsAppButton />
       <VideoZone>
         <Hero />
         <About />
