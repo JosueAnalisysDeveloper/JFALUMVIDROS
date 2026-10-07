@@ -2,12 +2,14 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { Check, Send } from 'lucide-react'
 import { WHATSAPP } from '../hooks'
+import { formatTelefone, TELEFONE_PATTERN } from '../phone'
 
 const beneficios = ['Orçamento gratuito e sem compromisso', 'Orientação técnica especializada', 'Resposta em até 24 horas']
 const campo = 'w-full rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none transition-colors focus:border-[#64CEFB]'
 
 export default function ContactForm() {
   const [enviado, setEnviado] = useState(false)
+  const [telefone, setTelefone] = useState('')
 
   function enviar(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -41,13 +43,31 @@ export default function ContactForm() {
         <form onSubmit={enviar} className="space-y-5 rounded-2xl border border-white/15 bg-[#0b2a4a]/80 p-6 backdrop-blur-sm md:p-8">
           {[
             { id: 'nome', label: 'Nome', type: 'text', ph: 'Seu nome completo' },
-            { id: 'whatsapp', label: 'WhatsApp', type: 'tel', ph: '(85) 99999-9999' },
+            { id: 'whatsapp', label: 'WhatsApp', type: 'tel', ph: '+55 99 99999-9999' },
             { id: 'email', label: 'E-mail', type: 'email', ph: 'seu@email.com' },
             { id: 'cidade', label: 'Cidade', type: 'text', ph: 'Sua cidade' },
           ].map((f) => (
             <div key={f.id}>
               <label htmlFor={f.id} className="mb-2 block text-sm font-medium text-white">{f.label}</label>
-              <input id={f.id} name={f.id} type={f.type} placeholder={f.ph} required={f.id !== 'email'} className={campo} />
+              {f.id === 'whatsapp' ? (
+                <input
+                  id={f.id}
+                  name={f.id}
+                  type="tel"
+                  inputMode="tel"
+                  autoComplete="tel"
+                  placeholder={f.ph}
+                  required
+                  maxLength={17}
+                  pattern={TELEFONE_PATTERN}
+                  title="Use o formato +55 99 99999-9999"
+                  value={telefone}
+                  onChange={(e) => setTelefone(formatTelefone(e.target.value))}
+                  className={campo}
+                />
+              ) : (
+                <input id={f.id} name={f.id} type={f.type} placeholder={f.ph} required={f.id !== 'email'} className={campo} />
+              )}
             </div>
           ))}
           <button type="submit" className="btn-anim group flex w-full items-center justify-center gap-2 rounded-full bg-[#0a3d91] px-8 py-4 font-medium text-white transition-colors hover:bg-[#64CEFB] hover:text-[#0b2a4a]">
