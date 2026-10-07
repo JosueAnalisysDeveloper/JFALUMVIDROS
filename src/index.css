@@ -28,3 +28,29 @@ body { margin: 0; background: #000; font-family: 'Inter', sans-serif; -webkit-fo
   html { scroll-behavior: auto; }
   .btn-anim, .btn-anim::after { transition: none; }
 }
+
+/* Fundo "aurora": manchas de azul que flutuam devagar atrás do conteúdo (no lugar da cor estática) */
+.bg-aurora { --base: #0b2a4a; position: relative; isolation: isolate; overflow: clip; background-color: var(--base); }
+.bg-aurora-mid { --base: #0e3a63; }
+.bg-aurora-blue { --base: #1f6e99; }
+.bg-aurora::before, .bg-aurora::after {
+  content: ''; position: absolute; inset: 0 -12%; z-index: -1; pointer-events: none; will-change: transform;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 240px, #000 calc(100% - 240px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 240px, #000 calc(100% - 240px), transparent);
+}
+.bg-aurora::before {
+  background:
+    radial-gradient(38% 30% at 15% 25%, rgba(100, 206, 251, .22), transparent 70%),
+    radial-gradient(34% 30% at 85% 15%, rgba(10, 61, 145, .55), transparent 70%),
+    radial-gradient(40% 30% at 70% 85%, rgba(100, 206, 251, .14), transparent 70%);
+  animation: aurora-a 16s ease-in-out infinite alternate;
+}
+.bg-aurora::after {
+  background:
+    radial-gradient(35% 28% at 30% 80%, rgba(31, 110, 153, .5), transparent 70%),
+    radial-gradient(30% 25% at 90% 55%, rgba(100, 206, 251, .12), transparent 70%);
+  animation: aurora-b 22s ease-in-out infinite alternate;
+}
+@keyframes aurora-a { from { transform: translate3d(-5%, -3%, 0) scale(1); } to { transform: translate3d(5%, 4%, 0) scale(1.12); } }
+@keyframes aurora-b { from { transform: translate3d(4%, 3%, 0) scale(1.1); } to { transform: translate3d(-6%, -4%, 0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .bg-aurora::before, .bg-aurora::after { animation: none; } }

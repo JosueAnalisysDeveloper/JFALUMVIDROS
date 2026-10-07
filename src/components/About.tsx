@@ -3,8 +3,8 @@ import fachada from '../assets/fachada.webp'
 
 export default function About() {
   return (
-    <section id="quem-somos" className="bg-[#1f6e99] px-6 py-20 md:py-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[minmax(0,420px)_1fr] md:gap-16">
+    <section id="quem-somos" className="px-6 py-20 md:py-28">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 rounded-3xl border border-white/15 bg-[#0b2a4a]/45 p-6 shadow-2xl backdrop-blur-md md:grid-cols-[minmax(0,420px)_1fr] md:gap-14 md:p-10">
         <Reveal>
           <img src={fachada} alt="Fachada da JF Alumvidros" className="w-full rounded-2xl border border-white/20 object-cover shadow-2xl" />
         </Reveal>

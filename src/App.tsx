@@ -1,4 +1,5 @@
 import Hero from './components/Hero'
+import VideoZone from './components/VideoZone'
 import About from './components/About'
 import WhyUs from './components/WhyUs'
 import HorizontalGallery from './components/HorizontalGallery'
@@ -13,9 +14,11 @@ export default function App() {
   return (
     <>
       <ScrollProgress />
-      <Hero />
-      <About />
-      <WhyUs />
+      <VideoZone>
+        <Hero />
+        <About />
+        <WhyUs />
+      </VideoZone>
       <HorizontalGallery />
       <ExpandPanels />
       <Partner />

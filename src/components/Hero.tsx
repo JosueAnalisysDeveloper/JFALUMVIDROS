@@ -2,25 +2,10 @@ import { ArrowRight } from 'lucide-react'
 import Navbar from './Navbar'
 import ShinyText from './ShinyText'
 
-const VIDEO_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_105406_16f4600d-7a92-4292-b96e-b19156c7830a.mp4'
-
 export default function Hero() {
   return (
-    <section id="inicio" className="relative h-screen w-full overflow-hidden bg-black">
-      {/* Fundo em azul da marca enquanto o vídeo carrega */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0b2a4a] via-[#1f6e99] to-[#0b2a4a]" />
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src={VIDEO_URL}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0b2a4a]/60 via-transparent to-[#0b2a4a]/70" />
-
-      <div className="relative z-10 flex h-full flex-col">
+    <section id="inicio" className="relative h-screen w-full">
+      <div className="flex h-full flex-col">
         <Navbar />
 
         <div className="mx-auto grid w-full max-w-7xl gap-6 px-6 pt-4 lg:grid-cols-2 lg:gap-12">

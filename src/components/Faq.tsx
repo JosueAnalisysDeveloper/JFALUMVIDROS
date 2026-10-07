@@ -16,7 +16,7 @@ const perguntas: { icon: LucideIcon; q: string; a: string }[] = [
 export default function Faq() {
   const [aberta, setAberta] = useState<number | null>(0)
   return (
-    <section id="duvidas" className="bg-[#0b2a4a] px-6 py-20 md:py-28">
+    <section id="duvidas" className="bg-aurora px-6 py-20 md:py-28">
       <div className="mx-auto max-w-3xl">
         <Reveal>
           <p className="text-xs uppercase tracking-tight text-[#64CEFB] md:text-sm">Dúvidas frequentes</p>

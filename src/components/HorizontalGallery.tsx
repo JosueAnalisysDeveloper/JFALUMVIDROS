@@ -25,7 +25,7 @@ export default function HorizontalGallery() {
   const x = useTransform(scrollYProgress, [0, 1], [0, -curso])
 
   return (
-    <section id="servicos" ref={caixa} className="relative h-[350vh] bg-[#0b2a4a]">
+    <section id="servicos" ref={caixa} className="bg-aurora relative h-[350vh]">
       <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
         <div className="mx-auto w-full max-w-7xl px-6">
           <p className="text-xs uppercase tracking-tight text-[#64CEFB] md:text-sm">Nossos trabalhos</p>

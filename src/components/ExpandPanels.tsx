@@ -34,7 +34,7 @@ function Paineis({ itens }: { itens: Produto[] }) {
 
 export default function ExpandPanels() {
   return (
-    <section id="categorias" className="bg-[#0e3a63] px-6 py-20 md:py-28">
+    <section id="categorias" className="bg-aurora bg-aurora-mid px-6 py-20 md:py-28">
       <div className="mx-auto max-w-7xl space-y-16">
         <Reveal>
           <p className="text-xs uppercase tracking-tight text-[#64CEFB] md:text-sm">Categorias</p>

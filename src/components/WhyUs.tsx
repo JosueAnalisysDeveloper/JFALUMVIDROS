@@ -15,7 +15,7 @@ const motivos: { icon: LucideIcon; title: string; text: string }[] = [
 export default function WhyUs() {
   const luz = useLuz()
   return (
-    <section id="porque" className="bg-[#0b2a4a] px-6 py-20 md:py-28">
+    <section id="porque" className="px-6 pb-32 pt-12 md:pb-44 md:pt-16">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <p className="text-xs uppercase tracking-tight text-[#64CEFB] md:text-sm">Diferenciais</p>
@@ -24,7 +24,7 @@ export default function WhyUs() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {motivos.map(({ icon: Icon, title, text }, i) => (
             <Reveal key={title} delay={(i % 3) * 0.1}>
-              <article onMouseMove={luz} className="js-luz h-full rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-[#64CEFB]/40">
+              <article onMouseMove={luz} className="js-luz h-full rounded-2xl border border-white/15 bg-[#0b2a4a]/45 p-6 backdrop-blur-md transition-colors hover:border-[#64CEFB]/40">
                 <Icon className="h-9 w-9 text-[#64CEFB]" />
                 <h3 className="mt-5 text-lg font-semibold text-white">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/70">{text}</p>

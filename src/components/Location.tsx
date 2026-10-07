@@ -13,7 +13,7 @@ const info = [
 
 export default function Location() {
   return (
-    <section id="localizacao" className="bg-[#0b2a4a] px-6 py-20 md:py-28">
+    <section id="localizacao" className="bg-aurora px-6 py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
         <div>
           <p className="text-xs uppercase tracking-tight text-[#64CEFB] md:text-sm">Onde estamos</p>

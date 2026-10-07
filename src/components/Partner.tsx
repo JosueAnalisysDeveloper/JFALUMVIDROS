@@ -4,7 +4,7 @@ import morumbi from '../assets/morumbi.webp'
 export default function Partner() {
   const luz = useLuz()
   return (
-    <section className="bg-[#1f6e99] px-6 py-16 md:py-20">
+    <section className="bg-aurora bg-aurora-blue px-6 py-16 md:py-20">
       <div
         onMouseMove={luz}
         className="js-luz mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-2xl border border-white/20 bg-white/10 p-6 text-center md:flex-row md:gap-10 md:p-8 md:text-left"
