@@ -4,10 +4,10 @@ import Reveal from './Reveal'
 import { useLuz } from '../hooks'
 
 const motivos: { icon: LucideIcon; title: string; text: string }[] = [
-  { icon: CalendarCheck, title: 'Desde 2018', text: 'Experiência no ramo de vidros e esquadrias, fundada por Jefferson Harlen.' },
-  { icon: Ruler, title: 'Projetos sob medida', text: 'Cada vão é medido e executado para o seu ambiente.' },
-  { icon: ShieldCheck, title: 'Segurança e qualidade', text: 'Vidro temperado e ferragens de qualidade em parceria com a Morumbi.' },
-  { icon: FileText, title: 'Orçamento gratuito', text: 'Orçamento sem compromisso, para você decidir com tranquilidade.' },
+  { icon: CalendarCheck, title: '+ 10 Anos de Mercado', text: 'Experiência no ramo de vidros e esquadrias, fundada por Jefferson Harlen.' },
+  { icon: Ruler, title: 'Projetos sob Medida', text: 'Cada vão é medido e executado para o seu ambiente.' },
+  { icon: ShieldCheck, title: 'Segurança e Qualidade', text: 'Vidro temperado e ferragens de qualidade em parceria com a Morumbi.' },
+  { icon: FileText, title: 'Orçamentos', text: 'Orçamento sem compromisso, para você decidir com tranquilidade.' },
   { icon: Wrench, title: 'Orientação técnica', text: 'Equipe especializada que indica a melhor solução para cada caso.' },
   { icon: MessageCircle, title: 'Resposta em até 24 horas', text: 'Fale com a gente pelo WhatsApp e receba retorno rápido.' },
 ]

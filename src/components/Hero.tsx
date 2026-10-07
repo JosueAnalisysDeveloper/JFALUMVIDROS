@@ -8,15 +8,6 @@ export default function Hero() {
       <div className="flex h-full flex-col">
         <Navbar />
 
-        <div className="mx-auto grid w-full max-w-7xl gap-6 px-6 pt-4 lg:grid-cols-2 lg:gap-12">
-          <p className="max-w-md text-sm text-white/80 md:text-base">
-            Especialistas em esquadrias de alumínio, guarda-corpo, portão basculante, box e vidro
-            temperado, com projetos sob medida e acabamento de qualidade.
-          </p>
-          <p className="text-sm text-white/80 md:text-base lg:text-right">
-            Desde 2018 transformando espaços, fundada por Jefferson Harlen.
-          </p>
-        </div>
 
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-6 text-center">
           <p className="mb-4 text-xs uppercase tracking-tight text-white/80 md:text-sm">
