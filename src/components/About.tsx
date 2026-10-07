@@ -1,14 +1,10 @@
 import Reveal from './Reveal'
-import fachada from '../assets/fachada.webp'
 
 export default function About() {
   return (
     <section id="quem-somos" className="px-6 py-20 md:py-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 rounded-3xl border border-white/15 bg-[#0b2a4a]/45 p-6 shadow-2xl backdrop-blur-md md:grid-cols-[minmax(0,420px)_1fr] md:gap-14 md:p-10">
-        <Reveal>
-          <img src={fachada} alt="Fachada da JF Alumvidros" className="w-full rounded-2xl border border-white/20 object-cover shadow-2xl" />
-        </Reveal>
-        <Reveal delay={0.15}>
+      <Reveal>
+        <div className="mx-auto max-w-3xl rounded-3xl border border-white/15 bg-[#0b2a4a]/45 p-8 text-center shadow-2xl backdrop-blur-md md:p-12">
           <p className="text-xs uppercase tracking-tight text-white/80 md:text-sm">Nossa história</p>
           <h2 className="mt-2 text-4xl font-semibold tracking-tighter text-white md:text-6xl">Quem Somos?</h2>
           <p className="mt-6 text-base leading-relaxed text-white/90 md:text-lg">
@@ -20,8 +16,8 @@ export default function About() {
             Prestamos serviços de envidraçamento, fachada de vidro temperado, execução de corrimão de vidro e alumínio, fechamento com
             vidro temperado, portões com lambris e muito mais.
           </p>
-        </Reveal>
-      </div>
+        </div>
+      </Reveal>
     </section>
   )
 }
