@@ -54,13 +54,3 @@ body { margin: 0; background: #000; font-family: 'Inter', sans-serif; -webkit-fo
 @keyframes aurora-a { from { transform: translate3d(-5%, -3%, 0) scale(1); } to { transform: translate3d(5%, 4%, 0) scale(1.12); } }
 @keyframes aurora-b { from { transform: translate3d(4%, 3%, 0) scale(1.1); } to { transform: translate3d(-6%, -4%, 0) scale(1); } }
 @media (prefers-reduced-motion: reduce) { .bg-aurora::before, .bg-aurora::after { animation: none; } }
-
-/* Botão flutuante do WhatsApp */
-.whatsapp-btn {
-  position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px;
-  background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 35px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); z-index: 9999;
-  display: flex; align-items: center; justify-content: center; text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.whatsapp-btn:hover { background-color: #20ba5a; transform: scale(1.1); }
