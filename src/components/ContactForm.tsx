@@ -20,7 +20,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contato" className="bg-aurora bg-aurora-blue px-6 py-20 md:py-28">
+    <section id="contato" className="bg-aurora px-6 py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
         <div>
           <div className="h-1 w-16 rounded bg-[#64CEFB]" />
@@ -40,7 +40,7 @@ export default function ContactForm() {
           </ul>
         </div>
 
-        <form onSubmit={enviar} className="space-y-5 rounded-2xl border border-white/15 bg-[#0b2a4a]/80 p-6 backdrop-blur-sm md:p-8">
+        <form onSubmit={enviar} className="space-y-5 rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-md md:p-8">
           {[
             { id: 'nome', label: 'Nome', type: 'text', ph: 'Seu nome completo' },
             { id: 'whatsapp', label: 'WhatsApp', type: 'tel', ph: '+55 99 99999-9999' },
