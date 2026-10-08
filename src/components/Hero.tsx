@@ -10,9 +10,7 @@ export default function Hero() {
 
 
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-6 text-center">
-          <p className="mb-4 text-xs uppercase tracking-tight text-white/80 md:text-sm">
-            Quem Somos · Vidraçaria
-          </p>
+          
           <h1 className="text-5xl font-medium leading-[0.85] tracking-tighter text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
             <span className="block">JF</span>
             <span className="block pb-2">

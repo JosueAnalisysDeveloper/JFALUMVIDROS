@@ -14,7 +14,9 @@ export default function ContactForm() {
   function enviar(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const d = new FormData(e.currentTarget)
-    const msg = `Olá! Gostaria de um orçamento.\nNome: ${d.get('nome')}\nWhatsApp: ${d.get('whatsapp')}\nE-mail: ${d.get('email')}\nCidade: ${d.get('cidade')}`
+    let msg = `Olá! Gostaria de um orçamento.\nNome: ${d.get('nome')}\nWhatsApp: ${d.get('whatsapp')}\nE-mail: ${d.get('email')}\nCidade: ${d.get('cidade')}`
+    const busca = String(d.get('busca') ?? '').trim()
+    if (busca) msg += `\nO que busco: ${busca}`
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener')
     setEnviado(true)
   }
@@ -70,6 +72,12 @@ export default function ContactForm() {
               )}
             </div>
           ))}
+          <div>
+            <label htmlFor="busca" className="mb-2 block text-sm font-medium text-white">
+              O que você busca? <span className="font-normal text-white/50">(opcional)</span>
+            </label>
+            <textarea id="busca" name="busca" rows={3} placeholder="Ex.: box de vidro para banheiro, janela de alumínio..." className={`${campo} resize-y`} />
+          </div>
           <button type="submit" className="btn-anim group flex w-full items-center justify-center gap-2 rounded-full bg-[#0a3d91] px-8 py-4 font-medium text-white transition-colors hover:bg-[#64CEFB] hover:text-[#0b2a4a]">
             <Send className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             Solicitar orçamento
